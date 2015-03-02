@@ -2,13 +2,52 @@
 <html>
 <head>
   <title>Blog</title>
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="sidebar">
+    <div id="logo">
+      <%= link_to root_path do %>
+        <%= image_tag "logo.png", size: "56x37" %>
+      <% end %>
+    </div>
 
-<%= yield %>
+    <ul>
+      <li class="category"> About </li>
+      <li><%= link_to "Blog", root_path %></li>
+      <li>About</li>
+    </ul>
+
+    <ul>
+      <li class="category"> Social </li>
+      <li><a href="https://www.facebook.com/christopherhui">Facebook</a></li>
+      <li><a href="https://twitter.com/ChristopherHui">Twitter</a></li>
+      <li><a href="https://github.com/christopherhuii">GitHub</a></li>
+      <li><a href="www.linkedin.com/in/christopherhuii">LinkedIn</a></li>
+      <li><a href="mailto:christopher.kam.hui@gmail.com">Email</a></li>
+    </ul>
+
+    <p class="sign_in">Admin Login</p>
+  </div>
+
+  <div id="main_content">
+    <div id="header">
+      <p><%= link_to "All Posts", root_path %></p>
+      <div class="buttons">
+        <button class="button"><%= link_to "New Post", new_post_path %></button>
+        <button class="button">Logout</button>
+      </div>
+    </div>
+
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert") %>
+    <% end %>
+
+    <%= yield %>
+  </div>
 
 </body>
 </html>
