@@ -226,6 +226,11 @@ a {
         text-decoration: none;
       }
     }
+    #errors {
+      li{
+        color: red;
+      }
+    }
   }
   .links {
     margin: 2em 0;
