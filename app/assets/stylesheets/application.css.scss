@@ -16,7 +16,12 @@
 
 @import 'normalize';
 
+* {
+margin: 0;
+}
+
 html, body {
+  height: 100%;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -53,6 +58,11 @@ a {
 }
 
 #main_content {
+  position: relative;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -2em;
   .alert {
     margin: 2% 5%;
     background: #f5f7f9;
@@ -215,4 +225,12 @@ a {
       border: 1px solid #33acb7;
       color: #33acb7;
   }
+}
+
+.footer, .push {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: red;
+  height: 2em;
 }
