@@ -8,36 +8,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="sidebar">
-    <div id="logo">
-      <%= link_to root_path do %>
-        <%= image_tag "logo.png", size: "56x37" %>
-      <% end %>
-    </div>
-
-    <ul>
-      <li class="category"> About </li>
-      <li><%= link_to "Blog", posts_path %></li>
-      <li><%= link_to "About", about_path %></li>
-    </ul>
-
-    <ul>
-      <li class="category"> Social </li>
-      <li><a href="https://www.facebook.com/christopherhui">Facebook</a></li>
-      <li><a href="https://twitter.com/ChristopherHui">Twitter</a></li>
-      <li><a href="https://github.com/christopherhuii">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/christopherhuii">LinkedIn</a></li>
-      <li><a href="mailto:christopher.kam.hui@gmail.com">Email</a></li>
-    </ul>
-
-    <p class="sign_in">
-      <% if !user_signed_in? %>
-        <%= link_to "Log In", new_user_session_path %>
-      <% end %>
-    </p>
-  </div>
-
   <div id="main_content">
+  <% if user_signed_in? %>
     <div id="header">
       <% if current_page?(posts_path) %>
         <p>All Posts</p>
@@ -48,10 +20,8 @@
       <% end %>
 
       <div class="buttons">
-        <% if user_signed_in? %>
           <button class="button"><%= link_to "New Post", new_post_path %></button>
           <button class="button"><%= link_to "Logout", destroy_user_session_path, :method => :delete %></button>
-        <% end %>
       </div>
     </div>
 
@@ -59,6 +29,7 @@
       <%= content_tag(:div, msg, class: "alert") %>
     <% end %>
 
+  <% end %>
     <%= yield %>
   </div>
 
