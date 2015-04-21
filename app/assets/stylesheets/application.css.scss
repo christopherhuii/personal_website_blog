@@ -36,6 +36,15 @@ a {
   color: inherit;
 }
 
+.navbar {
+  margin: 0;
+  background-color: #f5f7f9;
+  img {
+    margin-top: -15px;
+    margin-left: 17px;
+  }
+}
+
 .button {
   outline: none;
   background: transparent;
@@ -64,7 +73,7 @@ a {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -2em;
+  margin: 0 auto -3em;
   .alert {
     margin: 2% 5%;
     background: #f5f7f9;
@@ -233,6 +242,13 @@ a {
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: red;
-  height: 2em;
+  height: 3em;
+  text-align: center;
+  ul {
+    padding: 0;
+    margin-bottom: 0;
+    img {
+      margin: 0.5rem;
+    }
+  }
 }
