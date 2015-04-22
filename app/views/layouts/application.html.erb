@@ -9,50 +9,13 @@
 </head>
 <body>
   <div id="main_content">
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <%= link_to image_tag("logo.png", size: "75x50"), root_path, class: "navbar-brand" %>
-      </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav pull-right">
-          <li><%= link_to "About", about_path %></li>
-          <li><%= link_to "Blog", posts_path  %></li>
-          <li><%= link_to "Contact", contact_path  %></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-  <% if user_signed_in? %>
-    <div id="header">
-      <% if current_page?(posts_path) %>
-        <p>All Posts</p>
-      <% elsif current_page?(posts_path) %>
-        <p>About Me</p>
-      <% else %>
-        <%= link_to "Back to All Posts", posts_path %>
-      <% end %>
-
-      <div class="buttons">
-          <button class="button"><%= link_to "New Post", new_post_path %></button>
-          <button class="button"><%= link_to "Logout", destroy_user_session_path, :method => :delete %></button>
-      </div>
-    </div>
+    <%= render 'pages/navbar' %>
+    <%= render 'pages/admin_nav' %>
 
     <% flash.each do |name, msg| %>
       <%= content_tag(:div, msg, class: "alert") %>
     <% end %>
 
-  <% end %>
     <%= yield %>
   <div class="footer">
     <ul>
