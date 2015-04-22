@@ -17,5 +17,7 @@
 //= require_tree .
 
 $(function(){
+  $('.welcome-content').delay(500).animate({opacity: 1}, 1500);
   $('.alert').fadeIn(1000).delay(1500).fadeOut(500);
 });
+
