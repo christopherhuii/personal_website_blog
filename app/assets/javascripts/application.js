@@ -23,9 +23,24 @@ $(function(){
   $('.alert').fadeIn(1000).delay(1500).fadeOut(500);
 
   //Button scrolls down to the about me section
-  $('.banner-button').click(function(){
+  $('.aboutme-button').click(function(){
     $('html, body').animate({
       scrollTop:$('.about-me').position().top
+    });
+  });
+  $('.blog-button').click(function(){
+    $('html, body').animate({
+      scrollTop:$('.blog').position().top
+    });
+  });
+  $('.projects-button').click(function(){
+    $('html, body').animate({
+      scrollTop:$('.projects').position().top
+    });
+  });
+  $('.contact-button').click(function(){
+    $('html, body').animate({
+      scrollTop:$('.contact').position().top
     });
   });
 });

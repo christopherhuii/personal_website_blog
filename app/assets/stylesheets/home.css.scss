@@ -22,11 +22,12 @@
   }
 }
 .about-me {
-  height: 35rem;
+  min-height: 30rem;
   background-color: #bd7b7b;
-  text-align: center;
+  overflow: hidden;
   h1 {
-    padding: 2%;
+    text-align: center;
+    padding: 3%;
     font-size: 4rem;
     margin: 0;
   }
@@ -34,4 +35,20 @@
     line-height: 25px;
     font-size: 1.6rem;
   }
+}
+.inspiration {
+  min-height: 25rem;
+  background-color: grey;
+}
+.blog {
+  min-height: 25rem;
+  background-color: red;
+}
+.projects {
+  min-height: 25rem;
+  background-color: green;
+}
+.contact {
+  min-height: 25rem;
+  background-color: blue;
 }
