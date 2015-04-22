@@ -4,6 +4,13 @@
   text-align: center;
   .welcome-content {
     opacity: 0;
+    button {
+      outline: none;
+      border: 0;
+      background: transparent;
+      padding-top: 5rem;
+      font-size: 4vw;
+    }
     h1 {
       font-size: 8vw;
       margin: 0;

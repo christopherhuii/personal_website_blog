@@ -17,7 +17,16 @@
 //= require_tree .
 
 $(function(){
+  // For the FadeIn effect when the home page loads
   $('.welcome-content').delay(500).animate({opacity: 1}, 1500);
+  // Makes the alerts fadeout after a delay
   $('.alert').fadeIn(1000).delay(1500).fadeOut(500);
+
+  //Button scrolls down to the about me section
+  $('.banner-button').click(function(){
+    $('html, body').animate({
+      scrollTop:$('.about-me').position().top
+    });
+  });
 });
 
