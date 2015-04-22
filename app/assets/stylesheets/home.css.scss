@@ -1,5 +1,5 @@
 .welcome-banner {
-  height: 100vh;
+  height: 65rem;
   background-color: #ADD8E6;
   text-align: center;
   .welcome-content {
@@ -8,21 +8,30 @@
       outline: none;
       border: 0;
       background: transparent;
-      padding-top: 5rem;
-      font-size: 4vw;
+      padding-top: 7%;
+      font-size: 4rem;
     }
     h1 {
-      font-size: 8vw;
+      font-size: 6rem;
       margin: 0;
-      padding: 5%;
+      padding: 10%;
     }
     h3 {
-      font-size: 3vw;
+      font-size: 3rem;
     }
   }
 }
 .about-me {
-  height: 300px;
+  height: 35rem;
   background-color: #bd7b7b;
   text-align: center;
+  h1 {
+    padding: 2%;
+    font-size: 4rem;
+    margin: 0;
+  }
+  p {
+    line-height: 25px;
+    font-size: 1.6rem;
+  }
 }
