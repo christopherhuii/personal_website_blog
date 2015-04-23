@@ -30,6 +30,9 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
+h1 {
+  margin: 0;
+}
 
 a {
   text-decoration: none;
@@ -189,7 +192,6 @@ a {
     #content {
       h1 {
         font-weight: 500;
-        margin: 0;
       }
       p {
         font-size: 1.1em;
