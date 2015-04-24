@@ -28,33 +28,42 @@
   </div>
 </div>
 <div class="projects">
-  <h1>Projects</h1>
-  <div class="col-md-4">
-    <div class="thumbnail">
-      <%= image_tag('dbc-rpg.png') %>
-      <div class="caption">
-        <h3>DBC RPG</h3>
+  <!-- <div class="layer"> -->
+    <h1>Projects</h1>
+    <div class="row">
+      <div class="col-md-4">
+        <%= link_to("http://redtreeproductions.github.io/dbc-rpg-web.html") do %>
+        <div class="thumbnail">
+          <%= image_tag('dbc-rpg.png') %>
+          <div class="caption">
+            <h3>DBC RPG</h3>
+          </div>
+        </div>
+        <% end %>
+      </div>
+      <div class="col-md-4">
+        <%= link_to("https://github.com/christopherhuii/brewED") do %>
+        <div class="thumbnail">
+          <%= image_tag('brewED.png') %>
+          <div class="caption">
+            <h3>brewED</h3>
+          </div>
+        </div>
+        <% end %>
+      </div>
+      <div class="col-md-4">
+        <%= link_to("https://doineedajacket.herokuapp.com") do %>
+        <div class="thumbnail">
+          <%= image_tag('do_i_need_a_jacket.png') %>
+          <div class="caption">
+            <h3>Do I Need a Jacket?</h3>
+          </div>
+        </div>
+        <% end %>
       </div>
     </div>
-  </div>
-  <div class="col-md-4">
-    <%= link_to("https://github.com/christopherhuii/brewED") do %>
-    <div class="thumbnail">
-      <%= image_tag('brewED.png') %>
-      <div class="caption">
-        <h3>brewED</h3>
-      </div>
-    </div>
-    <% end %>
-  </div>
-  <div class="col-md-4">
-    <div class="thumbnail">
-      <%= image_tag('do_i_need_a_jacket.png') %>
-      <div class="caption">
-        <h3>Do I Need a Jacket?</h3>
-      </div>
-    </div>
-  </div>
+    <%= link_to "Explore", posts_path, class: "btn btn-default projects-button" %>
+  <!-- </div> -->
 </div>
 <div class="contact">
   <h1>'Git' in Touch!</h1>
