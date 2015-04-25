@@ -1,3 +1,5 @@
+$light_grey: #ccc;
+
 .welcome-banner {
   height: 65rem;
   background-color: #ADD8E6;
@@ -67,7 +69,7 @@
     font-size: 3rem;
     background-color: transparent;
     border: none;
-    outline: #CCC solid 2px;
+    outline: $light_grey solid 2px;
     &:hover {
       background-color: rgba(255, 255, 255, 0.5);
     }
@@ -78,18 +80,28 @@
   background-color: white;
   // position: relative;
   padding-bottom: 5%;
-  .projects-button {
+  .projects-button, .github-button {
     margin-top: 3%;
     font-size: 3rem;
     background-color: transparent;
     border: none;
-    outline: #CCC solid 2px;
+    outline: $light_grey solid 2px;
     &:hover {
       background-color: rgba(255, 255, 255, 0.5);
     }
   }
+  .github-button {
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: $light_grey;
+    border-radius: 0px;
+    &:hover {
+      background-color: $light_grey;
+      opacity: 0.9;
+    }
+  }
   .thumbnail {
-    background-color: #ccc;
+    background-color: $light_grey;
     display: block;
   }
 }
