@@ -42,6 +42,9 @@ a {
 .navbar {
   margin: 0;
   background-color: #f5f7f9;
+  border-radius: 0;
+  border: none;
+  border-bottom: 5px solid #ccc;
   img {
     margin-top: -15px;
     margin-left: 17px;

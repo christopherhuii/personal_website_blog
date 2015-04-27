@@ -1,10 +1,18 @@
 $light_grey: #ccc;
 
+
 .welcome-banner {
   height: 65rem;
-  background-color: #ADD8E6;
+  background-image: url('macbook.jpg');
+  background-size: cover;
+  background-position: 60% 40%;
+  position: relative;
   text-align: center;
+  .layer {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
   .welcome-content {
+    color: #ccc;
     opacity: 0;
     button {
       outline: none;
