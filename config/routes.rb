@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments
   end
-  resrouces :projects
+  resources :projects
 
   root "pages#home"
 
