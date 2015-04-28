@@ -226,9 +226,15 @@ a {
   input[type="text"] {
     height: 35px;
   }
-  textarea {
+
+  #post_body { //this is textarea for posts
     min-height: 180px;
   }
+
+  #project_description { //this is textarea for project descriptions
+    height: 100px;
+  }
+
   input[type="submit"] {
     outline: none;
     background: transparent;
