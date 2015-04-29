@@ -1,0 +1,6 @@
+<div class="container">
+  <h1><%= @project.name %></h1>
+  <%= link_to "Check Out the Code", @project.github_url, class: "btn btn-default" %>
+  <%= link_to "Check Out the Live Project", @project.project_url, class: "btn btn-default" %>
+  <p><%= @project.description %></p>
+</div>
