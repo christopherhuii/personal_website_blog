@@ -41,9 +41,14 @@ $light_grey: #ccc;
     padding: 3%;
     font-size: 4rem;
   }
+  h3 {
+    margin-top: 0;
+  }
   p {
-    line-height: 25px;
-    font-size: 1.6rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    line-height: 20px;
+    font-size: 1.3rem;
     text-align: justify;
   }
   .about-me-button {
@@ -65,6 +70,9 @@ $light_grey: #ccc;
   background-position: 100% 14%;
   text-align: center;
   position: relative;
+  .layer {
+    background-color: rgba(204,204,204,0.4);
+  }
   h3 {
     padding-top: 5%;
   }
