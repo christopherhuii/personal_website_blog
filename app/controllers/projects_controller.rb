@@ -31,10 +31,17 @@ class ProjectsController < ApplicationController
 
   def update
 
+    if @project.update(params[:project].permit(:name, :description, :github_url, :project_url))
+      redirect_to @project
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @project.destroy
 
+    redirect_to projects_path
   end
 
   private
