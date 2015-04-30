@@ -80,6 +80,7 @@ a {
   height: auto !important;
   height: 100%;
   margin: 0 auto -3em;
+  padding-bottom: 3em;
   .alert {
     margin: 2% 5%;
     background: #f5f7f9;
@@ -262,5 +263,12 @@ a {
     img {
       margin: 0.5rem;
     }
+  }
+}
+
+//Sets size of image for projects images
+.image_tag {
+  img {
+    max-width: auto;
   }
 }
