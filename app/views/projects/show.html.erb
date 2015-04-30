@@ -1,6 +1,10 @@
 <div class="container">
   <h1><%= @project.name %></h1>
-  <%= link_to "Check Out the Code", @project.github_url, class: "btn btn-default" %>
-  <%= link_to "Check Out the Live Project", @project.project_url, class: "btn btn-default" %>
+  <% if current_user === @project.user %>
+    <%= link_to "Delete", project_path, method: :delete, data: {confirm: "Are you sure?"} %> |
+    <%= link_to "Edit", edit_project_path %>
+  <% end %>
+  <%= link_to "Check Out the Code", @project.github_url, class: "btn btn-default" if @project.github_url.present? %>
+  <%= link_to "Check Out the Live Project", @project.project_url, class: "btn btn-default" if @project.project_url.present?%>
   <p><%= @project.description %></p>
 </div>
