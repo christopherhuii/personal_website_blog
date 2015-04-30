@@ -1,5 +1,5 @@
 <ol>
-<% @projects.each do |project| %>
-  <li><%= link_to project.name, project_path(project) %></li>
-<% end %>
+  <% @projects.each do |project| %>
+    <li><%= link_to project.name, project_path(project) %></li>
+  <% end %>
 </ol>
