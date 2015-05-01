@@ -266,6 +266,17 @@ a {
   }
 }
 
+
+// EVERYTHING DOWN HERE IS FOR THE PROJECT SHOW PAGES.
+// CAN EXTRACT OUT LATER
+
+.project_show {
+  text-align: center;
+  h1 {
+    font-size: 5rem;
+    padding: 2%;
+  }
+}
 //Sets size of image for projects images
 .image_tag {
   img {

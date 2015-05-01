@@ -1,15 +1,19 @@
 <div class="container">
-  <h1><%= @project.name %></h1>
-  <% if current_user === @project.user %>
-    <%= link_to "Delete", project_path, method: :delete, data: {confirm: "Are you sure?"} %> |
-    <%= link_to "Edit", edit_project_path %>
-  <% end %>
-  <%= link_to "Check Out the Code", @project.github_url, class: "btn btn-default" if @project.github_url.present? %>
-  <%= link_to "Check Out the Live Project", @project.project_url, class: "btn btn-default" if @project.project_url.present?%>
-  <div class="image_tag">
-    <% @project_attachments.each do |image| %>
-      <%= image_tag image.image_url, size: "600x400" %>
-    <% end %>
+  <div class="project_show">
+    <h1><%= @project.name %></h1>
+    <div class="user_functions">
+      <% if current_user === @project.user %>
+        <%= link_to "Delete", project_path, method: :delete, data: {confirm: "Are you sure?"} %> |
+        <%= link_to "Edit", edit_project_path %>
+      <% end %>
+    </div>
+    <%= link_to "Check Out the Code", @project.github_url, class: "btn btn-default" if @project.github_url.present? %>
+    <%= link_to "Check Out the Project", @project.project_url, class: "btn btn-default" if @project.project_url.present?%>
+    <div class="image_tag">
+      <% @project_attachments.each do |image| %>
+        <%= image_tag image.image_url, class: "img-thumbnail" %>
+      <% end %>
+    </div>
+    <p><%= @project.description %></p>
   </div>
-  <p><%= @project.description %></p>
 </div>
