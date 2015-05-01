@@ -33,6 +33,9 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   margin: 0;
 }
+p {
+  font-family: 'Raleway';
+}
 
 a {
   text-decoration: none;
@@ -79,8 +82,8 @@ a {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -3em;
-  padding-bottom: 3em;
+  margin: 0 auto -5em;
+  padding-bottom: 5em;
   .alert {
     margin: 2% 5%;
     background: #f5f7f9;
@@ -254,14 +257,17 @@ a {
   width: 100%;
   position: absolute;
   bottom: 0;
-  height: 3em;
+  height: 5em;               // 5.1 becaus there's a small white space under the footer, not sure what it is, hacky fix
   text-align: center;
-  background-color: white;
+  background-color: #ccc;
   ul {
     padding: 0;
     margin-bottom: 0;
+    line-height: 5em;          //for centering the stuff in the div
     img {
-      margin: 0.5rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      vertical-align: middle; //for centering the icons, vertically
     }
   }
 }
@@ -275,6 +281,16 @@ a {
   h1 {
     font-size: 5rem;
     padding: 2%;
+  }
+  p {
+    font-size: 2rem;
+    text-align: justify;
+
+  }
+  .project_button {
+    font-size: 3rem;
+    border-radius: 0;
+    margin: 1rem;
   }
 }
 //Sets size of image for projects images

@@ -7,13 +7,13 @@
         <%= link_to "Edit", edit_project_path %>
       <% end %>
     </div>
-    <%= link_to "Check Out the Code", @project.github_url, class: "btn btn-default" if @project.github_url.present? %>
-    <%= link_to "Check Out the Project", @project.project_url, class: "btn btn-default" if @project.project_url.present?%>
+    <%= link_to "Check Out the Code", @project.github_url, class: "btn btn-default project_button" if @project.github_url.present? %>
+    <%= link_to "Check Out the Project", @project.project_url, class: "btn btn-default project_button" if @project.project_url.present? %>
+    <p><%= @project.description %></p>
     <div class="image_tag">
       <% @project_attachments.each do |image| %>
         <%= image_tag image.image_url, class: "img-thumbnail" %>
       <% end %>
     </div>
-    <p><%= @project.description %></p>
   </div>
 </div>
