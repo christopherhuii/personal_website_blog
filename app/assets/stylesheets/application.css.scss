@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   margin: 0;
 }
-p {
+p, li {
   font-family: 'Raleway';
 }
 
@@ -210,6 +210,12 @@ a {
         text-decoration: none;
       }
     }
+    .about_info {
+      font-size: 1em;
+      li {
+        margin-top: 2%;
+      }
+    }
     #errors {
       li{
         color: red;
@@ -297,5 +303,22 @@ a {
 .image_tag {
   img {
     max-width: auto;
+  }
+}
+
+
+//CONTACT PAGE
+
+.contact_container {
+  text-align: center;
+  h1 {
+    margin: 2em;
+    a {
+      text-decoration: none;
+      background-color: transparent;
+    }
+  }
+  h3 {
+    margin: 3em;
   }
 }
