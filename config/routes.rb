@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :project_attachments
 
-  devise_for :users
+  devise_for :users, :path => 'asdfasdf'
   resources :posts do
     resources :comments
   end
